@@ -1,0 +1,19 @@
+name: horovod
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.8
+  - cmake=3.18
+  - make
+  - cxx-compiler=1.1
+  - openmpi
+  - mpi4py=3.0 # installs cuda-aware openmpi
+  - pip=20
+  - pip:
+    - -r file:requirements.txt
+  - tensorflow
+  - pytorch
+  - torchvision
